@@ -27,5 +27,5 @@ def estadisticas(request):
     })
 
 def listadevuelos(request):
-    vuelos = Vuelo.objects.all().order_by('price')
+    vuelos = Vuelo.objects.all().order_by('precio')
     return render(request, 'vuelos/listadevuelos.html', {'vuelos': vuelos})
