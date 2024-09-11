@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Lista de vuelos:</h2>
+<ul>
+  {% for vuelos in vuelos %}
+  <li>
+    {{ vuelos.id }} - {{ vuelos.nombre }} - {{ vuelos.tipo_vuelo }} - Precio: ${{ vuelos.precio }}
+  </li>
+  {% empty %}
+  <li>No hay vuelos en este momento.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
